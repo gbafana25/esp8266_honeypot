@@ -10,17 +10,17 @@
 #   made by the one and only Kramer Management Systems!! (not a real thing)
 #   
 #   Todo:
-#   log how many times it has been accessed
+#   log how many times it has been accessed (probably logging it to a file on the board's internal filesystem)
 #   send status updates through dweet.io
-#
+#   
 
 from socket import socket, AF_INET, SOCK_STREAM, SOL_SOCKET, SO_REUSEADDR
 import machine
 import urequests
 
 welcome = b'\r\n\nFDIC  FRONTIER SAVINGS BANK\r\nWARNING: UNAUTHORIZED USE IS PROHIBITED BY LAW\r\n'
-commands = [b'SYS_STATUS', b'DB_LIST', b'DB_ADD_ACCOUNT', b'DB_REMOVE_ACCOUNT' b'EXIT']
-valid_commands = b'\r\n\nSYS_STATUS - DISPLAY SYSTEM INFO\r\nDB_LIST - SHOW CURRENT DATABASE LISTING\r\nEXIT - CLOSE CONNECTION\r\n\n'
+commands = [b'SYS_STATUS', b'DB_LIST', b'ACCOUNT_MANAGER',  b'EXIT']
+valid_commands = b'\r\n\nSYS_STATUS - DISPLAY SYSTEM INFO\r\nDB_LIST - SHOW CURRENT DATABASE LISTING\r\nACCOUNT_MANAGER - OPENS ACCOUNT MANAGER\r\nEXIT - CLOSE CONNECTION\r\n\n'
 prompt = 'FSB_MNGR:---> '
 sys_info = b'\r\n\nKRAMER MANAGEMENT SYSTEMS\r\nENHANCED DATABASE SYSTEM V2\r\n\nOS: GM/OS\r\nVERSION: 3.04R3\r\nCPU USAGE: 12%\r\nRAM USAGE: 7%\r\n\n'
 database = b'ACCOUNT LIST:\r\nBUSINESS: 45,903\r\nHOME: 73,459\r\nCURRENT TRANSFERS: 7,824\r\n\n'
@@ -31,8 +31,10 @@ def showPrompt():
         conn.sendall(prompt)
 
 # currently not used, would be used for status updates
-def sendCurrentIP():
+def sendStatus():
+    # gets IP address in raw form
     raw_ip = urequests.get('http://api.ipify.org')
+    # converts to string format
     ip = raw_ip.text
     # if dweet is used, then change the thing name to something unique, do not keep this one
     send_ip = urequests.get('https://dweet.io/dweet/for/telnetespserver?ip=%s' % ip)
@@ -54,8 +56,8 @@ while True:
         conn.sendall(database)
     # closes connection if EXIT is sent
     elif data == commands[2]:
-        conn.sendall(b'INVALID ACCOUNT NUMBER')
-    elif data == commands[4]:
+        conn.sendall(b'\r\nERROR: PROCESS IN USE\r\n\n')
+    elif data == commands[3]:
         conn.sendall(b'\r\nCLOSING CONNECTION...')
         conn.close()
         sk.close()
