@@ -16,14 +16,16 @@
 
 from socket import socket, AF_INET, SOCK_STREAM, SOL_SOCKET, SO_REUSEADDR
 import machine
+import time
 import urequests
 
 welcome = b'\r\n\nFDIC  FRONTIER SAVINGS BANK\r\nWARNING: UNAUTHORIZED USE IS PROHIBITED BY LAW\r\n'
-commands = [b'SYS_STATUS', b'DB_LIST', b'ACCOUNT_MANAGER',  b'EXIT']
-valid_commands = b'\r\n\nSYS_STATUS - DISPLAY SYSTEM INFO\r\nDB_LIST - SHOW CURRENT DATABASE LISTING\r\nACCOUNT_MANAGER - OPENS ACCOUNT MANAGER\r\nEXIT - CLOSE CONNECTION\r\n\n'
+commands = [b'SYS_STATUS', b'DB_LIST', b'ACCOUNT_MANAGER', b'DEVICE_MANAGER', b'EXIT']
+valid_commands = b'\r\n\nSYS_STATUS - DISPLAY SYSTEM INFO\r\nDB_LIST - SHOW CURRENT DATABASE LISTING\r\nACCOUNT_MANAGER - OPENS ACCOUNT MANAGER\r\nDEVICE_MANAGER - SHOW CURRENTLY ATTACHED DEVICES\r\nEXIT - CLOSE CONNECTION\r\n\n'
 prompt = 'FSB_MNGR:---> '
 sys_info = b'\r\n\nKRAMER MANAGEMENT SYSTEMS\r\nENHANCED DATABASE SYSTEM V2\r\n\nOS: GM/OS\r\nVERSION: 3.04R3\r\nCPU USAGE: 12%\r\nRAM USAGE: 7%\r\n\n'
-database = b'ACCOUNT LIST:\r\nBUSINESS: 45,903\r\nHOME: 73,459\r\nCURRENT TRANSFERS: 7,824\r\n\n'
+database = b'\r\nACCOUNT LIST:\r\n----------------------\r\nBUSINESS: 45,903\r\nHOME: 73,459\r\nCURRENT TRANSFERS: 7,824\r\n\n'
+attached_devices = b'\r\n\nDEVICE LIST:\r\n--------------------\r\nFLOPPY DRIVE: DISK NOT INSERTED\r\nHARD DISK(1): 72MB/512MB USED\r\nNETWORK DRIVE(S): FSB NAS SYSTEM -- RUN NAS_STATUS FOR MORE INFO\r\n\n'
 
 # shows terminal prompt
 def showPrompt():
@@ -46,19 +48,28 @@ sk.listen(5)
 conn,addr = sk.accept()
 conn.sendall(welcome)
 
+# loops forever while client is connected, checks input with commands list
 while True:
     data = conn.recv(1024)
     # displays fake system information
     if data == commands[0]:
+        time.sleep(1)
         conn.sendall(sys_info)
     # shows fake database
     elif data == commands[1]:
+        time.sleep(1)
         conn.sendall(database)
-    # closes connection if EXIT is sent
+    # attempts to open fake account management application
     elif data == commands[2]:
+        time.sleep(1)
         conn.sendall(b'\r\nERROR: PROCESS IN USE\r\n\n')
     elif data == commands[3]:
+        time.sleep(1)
+        conn.sendall(attached_devices)
+    # closes connection
+    elif data == commands[4]:
         conn.sendall(b'\r\nCLOSING CONNECTION...')
+        time.sleep(1)
         conn.close()
         sk.close()
         del sk
