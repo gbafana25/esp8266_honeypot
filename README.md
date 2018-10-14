@@ -14,6 +14,6 @@ Coming soon:
  - more comments on code
  - more commands available to hackers
  - logging of how many times accessed
- - sending of dweets to send number of logins
+ - sending of [dweets](http://dweet.io/) to send number of logins
  - use of time.sleep() commands in order to emulate a old terminal with a slow baudrate
  - a bash script to setup ampy for Linux or Mac

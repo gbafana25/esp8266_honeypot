@@ -16,4 +16,5 @@ ap_if.active(False)
 station = network.WLAN(network.STA_IF)
 station.active(True)
 station.connect('ssid', 'password')
+#                    static IP       subnet mask     router IP     DNS server
 station.ifconfig(('192.168.0.200','255.255.255.0','192.168.0.1','68.105.28.11'))
