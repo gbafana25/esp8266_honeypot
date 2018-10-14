@@ -1,5 +1,6 @@
 # this file runs every time at boot
 # please fill in wifi credentials and ifconfig lines for a static IP
+# the values in the ifconfig function need to be changed to a static IP, your router IP, and you DNS server
 #import esp
 #esp.osdebug(None)
 import gc
