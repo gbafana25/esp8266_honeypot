@@ -10,7 +10,7 @@ The esp8266 handles all of the socket functions and the terminal prompt.
 
 Coming soon:
 
-more comments on code
+more comments on code\r\n
 more commands available to hackers
 logging of how many times accessed
 sending of dweets to send number of logins
