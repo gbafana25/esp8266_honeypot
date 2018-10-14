@@ -9,6 +9,7 @@ import network
 #webrep.start()
 gc.collect()
 
+# sets access point as false, since it is not needed
 ap_if = network.WLAN(network.AP_IF)
 ap_if.active(False)
 

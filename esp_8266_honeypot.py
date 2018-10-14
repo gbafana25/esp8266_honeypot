@@ -17,11 +17,11 @@ import machine
 import urequests
 
 welcome = b'\r\n\nFDIC  FRONTIER SAVINGS BANK\r\nWARNING: UNAUTHORIZED USE IS PROHIBITED BY LAW\r\n'
-commands = [b'SYS_STATUS', b'LIST', b'EXIT']
-valid_commands = b'\r\n\nSYS_STATUS\r\nLIST\r\nEXIT\r\n\n'
+commands = [b'SYS_STATUS', b'DB_LIST', b'EXIT']
+valid_commands = b'\r\n\nSYS_STATUS\r\nDB_LIST\r\nEXIT\r\n\n'
 prompt = 'FSB_MNGR:---> '
 sys_info = b'\r\n\nKRAMER MANAGEMENT SYSTEMS\r\nENHANCED DATABASE SYSTEM V2\r\n\nOS: GM/OS\r\nVERSION: 3.04R3\r\nCPU USAGE: 12%\r\nRAM USAGE: 7%\r\n\n'
-database = b'database here\r\n\n'
+database = b'ACCOUNT LIST:\r\nBUSINESS: 45,903\r\nHOME: 73,459\r\nCURRENT TRANSFERS: \r\n\n'
 
 def showPrompt():
     for i in range(1):
@@ -43,10 +43,12 @@ conn.sendall(welcome)
 
 while True:
     data = conn.recv(1024)
+    # displays fake system information
     if data == commands[0]:
         conn.sendall(sys_info)
     elif data == commands[1]:
         conn.sendall(database)
+    # closes connection if EXIT is sent
     elif data == commands[2]:
         conn.sendall(b'\r\nCLOSING CONNECTION...')
         conn.close()
