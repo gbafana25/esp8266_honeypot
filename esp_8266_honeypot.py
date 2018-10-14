@@ -20,6 +20,7 @@ def showPrompt():
 def sendCurrentIP():
     raw_ip = urequests.get('http://api.ipify.org')
     ip = raw_ip.text
+    # if dweet is used, then change the thing name to something unique, do not keep this one
     send_ip = urequests.get('https://dweet.io/dweet/for/telnetespserver?ip=%s' % ip)
 
 sk = socket(AF_INET, SOCK_STREAM)
