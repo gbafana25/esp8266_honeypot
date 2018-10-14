@@ -1,5 +1,17 @@
  # ESP8266 FAKE HONEYPOT
  # DESIGNED TO ACT AS A TELNET SERVER
+# Features:
+#   all uppercase text in the interface
+#   fake system details
+#   fake database
+#   
+#   made by the one and only Kramer Management Systems!! (not a real thing)
+#   
+#   Todo:
+#   log how many times it has been accessed
+#   send status updates through dweet.io
+#
+
 from socket import socket, AF_INET, SOCK_STREAM, SOL_SOCKET, SO_REUSEADDR
 import machine
 import urequests
