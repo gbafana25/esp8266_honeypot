@@ -16,4 +16,4 @@ Coming soon:
  - logging of how many times accessed
  - sending of [dweets](http://dweet.io/) to send number of logins
  - use of time.sleep() commands in order to emulate a old terminal with a slow baudrate
- - a bash script to setup ampy for Linux or Mac
+ - a bash script to setup ampy for Unix systems

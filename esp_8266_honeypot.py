@@ -19,12 +19,13 @@ import machine
 import urequests
 
 welcome = b'\r\n\nFDIC  FRONTIER SAVINGS BANK\r\nWARNING: UNAUTHORIZED USE IS PROHIBITED BY LAW\r\n'
-commands = [b'SYS_STATUS', b'DB_LIST', b'' b'EXIT']
+commands = [b'SYS_STATUS', b'DB_LIST', b'DB_ADD_ACCOUNT', b'DB_REMOVE_ACCOUNT' b'EXIT']
 valid_commands = b'\r\n\nSYS_STATUS - DISPLAY SYSTEM INFO\r\nDB_LIST - SHOW CURRENT DATABASE LISTING\r\nEXIT - CLOSE CONNECTION\r\n\n'
 prompt = 'FSB_MNGR:---> '
 sys_info = b'\r\n\nKRAMER MANAGEMENT SYSTEMS\r\nENHANCED DATABASE SYSTEM V2\r\n\nOS: GM/OS\r\nVERSION: 3.04R3\r\nCPU USAGE: 12%\r\nRAM USAGE: 7%\r\n\n'
 database = b'ACCOUNT LIST:\r\nBUSINESS: 45,903\r\nHOME: 73,459\r\nCURRENT TRANSFERS: 7,824\r\n\n'
 
+# shows terminal prompt
 def showPrompt():
     for i in range(1):
         conn.sendall(prompt)
@@ -52,7 +53,9 @@ while True:
     elif data == commands[1]:
         conn.sendall(database)
     # closes connection if EXIT is sent
-    elif data == commands[3]:
+    elif data == commands[2]:
+        conn.sendall(b'INVALID ACCOUNT NUMBER')
+    elif data == commands[4]:
         conn.sendall(b'\r\nCLOSING CONNECTION...')
         conn.close()
         sk.close()
