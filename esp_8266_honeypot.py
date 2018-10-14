@@ -1,6 +1,5 @@
  # ESP8266 FAKE HONEYPOT
  # DESIGNED TO ACT AS A TELNET SERVER
- # last edited: 10-13-18
 from socket import socket, AF_INET, SOCK_STREAM, SOL_SOCKET, SO_REUSEADDR
 import machine
 import urequests
