@@ -36,4 +36,6 @@ Coming soon:
  - organization of variables, and other extra function into a seperate module (or modules) for much cleaner   code
  - better readme (with memes possibly)
 
- please star this repo if you found it useful
+*please star this repo if you found it useful*
+
+DM @frogthemonkey25#6628 on Discord if you have any questions or found a typo
