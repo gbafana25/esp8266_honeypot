@@ -74,6 +74,7 @@ while True:
         sk.close()
         del sk
         break
+        machine.reset()
     elif data != commands and data == b'\r\n' and data != b'':
         showPrompt()
     elif data not in commands:
