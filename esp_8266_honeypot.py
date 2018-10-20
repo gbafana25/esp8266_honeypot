@@ -68,7 +68,7 @@ while True:
         conn.sendall(attached_devices)
     # closes connection
     elif data == commands[4]:
-        conn.sendall(b'\r\nCLOSING CONNECTION...')
+        conn.sendall(b'\r\nCLOSING CONNECTION...   AND LOGGING YOUR IP')
         time.sleep(1)
         conn.close()
         sk.close()
