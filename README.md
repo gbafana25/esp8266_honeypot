@@ -1,4 +1,4 @@
-# THE ESP_8266 HONEYPOT: A PROJECT TO TRAP SCRIPT KIDDIES EVERYWHERE!! 
+# THE ESP8266 HONEYPOT: A PROJECT TO TRAP SCRIPT KIDDIES EVERYWHERE!! 
 
 :stuck_out_tongue_winking_eye: :stuck_out_tongue_winking_eye: :stuck_out_tongue_winking_eye:
 
@@ -11,6 +11,13 @@ Comments on the code are still in progress
 Original inspiration for this came from the arduino-powered honeypot, found [here.](https://www.reddit.com/r/arduino/comments/5ngt87/this_is_my_arduinopowered_honeypot_if_you_want_to/)
 
 The esp8266 handles all of the socket functions and the terminal prompt.  The access point is disabled in the custom `boot.py` file.  The `boot.py` file must have the WiFi SSID, Wifi password, static IP, subnet mask, router IP, and DNS server address changed as needed.  The ampy config file (whichever one applies to your system) must be edited to point ampy to the right port (COMx for Windows, /dev/ttyUSB* for Linux, /dev/tty.* for Mac)
+
+## Features :ok_hand: :ok_hand: ##
+
+   - Console interface has **all-uppercase text**
+   - **Fake** database contents
+   - **Fake** system information
+   - **Fake** FDIC "get of my lawn" warnings
 
 ### The mentality an attacker (probably a script kiddie)
 
@@ -31,10 +38,10 @@ Coming soon:
  - more comments on code
  - more commands available to hackers
  - logging of how many times accessed
- - sending of [dweets](http://dweet.io/) to send status updates
+ - sending of [dweets](http://dweet.io/) to send status updates (Every time the MCU boots up)
  - use of time.sleep() commands in order to emulate a old terminal with a slow baudrate
- - organization of variables, and other extra function into a seperate module (or modules) for much cleaner   code
- - better readme (with memes possibly)
+ - implement try/except statement in the main code to avoid connection timeout (probably by resetting the     socket or rebooting the MCU)
+ - better readme (screenshots, and memes possibly)
 
 *please star this repo if you found it useful*
 
