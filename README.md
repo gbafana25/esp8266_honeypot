@@ -1,4 +1,4 @@
-# THE ESP_8266 HONEYPOT: A PROJECT TO TRAP HACKERS AND SCRIPT KIDDIES EVERYWHERE!! :stuck_out_tongue_with_winking_eye
+# THE ESP_8266 HONEYPOT: A PROJECT TO TRAP HACKERS AND SCRIPT KIDDIES EVERYWHERE!! :stuck_out_tongue_with_winking_eye:
 
 This is a honeypot programmed in Micropython for the ESP8266
 
