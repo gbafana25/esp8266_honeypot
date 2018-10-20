@@ -1,8 +1,9 @@
-# THE ESP_8266 HONEYPOT: A PROJECT TO TRAP HACKERS AND SCRIPT KIDDIES EVERYWHERE!! :smile
+# THE ESP_8266 HONEYPOT: A PROJECT TO TRAP HACKERS AND SCRIPT KIDDIES EVERYWHERE!! :stuck_out_tongue_with_winking_eye
+
 This is a honeypot programmed in Micropython for the ESP8266
 
 The honeypot is set up to act as a telnet server owned by a fake bank.
-Port forwarding is needed to be configured in order for the microcontroller to be accessed from a public IP.
+Port forwarding is needed to be configured in order for the microcontroller to be accessed from a public IP.  The public IP will be your routers IP, port 23 (45.403.300.444:23).  Make sure your router is secured since scanning the IP address will also reveal your router's login console.  Do this at your own risk!!  I am not liable if you get hacked.  
 Comments on the code are still in progress
 
 Original inspiration for this came from the arduino-powered honeypot, found [here.](https://www.reddit.com/r/arduino/comments/5ngt87/this_is_my_arduinopowered_honeypot_if_you_want_to/)
