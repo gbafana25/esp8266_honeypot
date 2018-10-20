@@ -14,10 +14,10 @@ The esp8266 handles all of the socket functions and the terminal prompt.  The ac
 
 ### The mentality an attacker (probably a script kiddie)
 
- **1.** Your ESP8266 honeypot found either with Shodan, Google Dorks, etc.
- **2.** The hacker scans your router, and finds port 23 open.  An experienced hacker will know it is a              honeypot (routers do not just have port 23 open randomly!!)
- **3.** The script kiddie will keep trying to guess the password for the router, until they decide to try          the telnet port, and they get excited that no password is required to login to the server
- **4.** They start entering commands, but after awhile, something doesn't seem right.... **UNTIL THEY TRY          TO EXIT AND REALIZE THAT THEY WERE BEING WATCHED THE WHOLE TIME!!! MWHAHAHAHA**
+ 1.  Your ESP8266 honeypot found either with Shodan, Google Dorks, etc.
+ 2.  The hacker scans your router, and finds port 23 open.  An experienced hacker will know it is a              honeypot (routers do not just have port 23 open randomly!!)
+ 3.  The script kiddie will keep trying to guess the password for the router, until they decide to try          the telnet port, and they get excited that no password is required to login to the server
+ 4.  They start entering commands, but after awhile, something doesn't seem right.... **UNTIL THEY TRY          TO EXIT AND REALIZE THAT THEY WERE BEING WATCHED THE WHOLE TIME!!! MWHAHAHAHA** (not really, their IP      wasn't logged, the messages is just to scare them)
 
 Deploying the script:
  1. Create file `main.py` in the project directory
