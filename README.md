@@ -1,4 +1,4 @@
-# esp8266_honeypot
+# THE ESP_8266 HONEYPOT: A PROJECT TO TRAP HACKERS AND SCRIPT KIDDIES EVERYWHERE!! :smile
 This is a honeypot programmed in Micropython for the ESP8266
 
 The honeypot is set up to act as a telnet server owned by a fake bank.
@@ -23,4 +23,7 @@ Coming soon:
  - logging of how many times accessed
  - sending of [dweets](http://dweet.io/) to send status updates
  - use of time.sleep() commands in order to emulate a old terminal with a slow baudrate
- - a bash script to setup ampy for Unix systems
+ - 
+ - better readme (with memes possibly)
+
+ please star this repo if you found it useful
