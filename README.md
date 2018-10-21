@@ -38,7 +38,7 @@ On the otherhand, this honeypot started as a funny thing to do and see how many 
  3.  The script kiddie will keep trying to guess the password for the router :confused:, until they decide to try the telnet port, and they get excited that no password is required to login to the server!! :grinning:
  4.  They start entering commands, but after awhile, something doesn't seem right.... **UNTIL THEY TRY          TO EXIT AND REALIZE THAT THEY WERE BEING WATCHED THE WHOLE TIME!!! MWHAHAHAHA** :smiling_imp: :smiling_imp: :astonished: (not really, their IP wasn't logged, the message is just to scare them)
 
-Deploying the script:
+## Deploying the script: ##
  1. Create file `main.py` in the project directory
  2. Copy and paste the contents of `esp8266_honeypot.py` into `main.py` with `cp esp8266_honeypot.py /path/to/main.py`
  3. Run the `ampy_config.bat` or `ampy_config.sh` (depending on your operating system)
@@ -47,7 +47,13 @@ Deploying the script:
  6. Reset your board for the program to run 
  7. Wait for those l33t h4x0rs!! :ok_hand:
 
-Coming soon:
+## Monitoring (optional) ##
+
+ - set up [Wireshark](https://www.wireshark.org/) on a free computer to run all the time and capture packets
+ - set a filter for Telnet ports
+ - you will be able to see the plain ASCII text, since Telnet is not encrypted!!
+
+## Coming soon: ##
 
  - more comments on code
  - more commands available to hackers
