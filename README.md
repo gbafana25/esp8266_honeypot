@@ -16,6 +16,8 @@ The esp8266 handles all of the socket functions and the terminal prompt.  The ac
 A honeypot is a device designed to lure/attract hackers into exploring your device as if it was a legitamte piece of infrastructure or private property that is unprotected.  Many open source honeypots, such as the ones found [here](https://github.com/paralax/awesome-honeypots) are designed to report attacks and gather information about hackers' activity on your network
 
 # The SCRIPT KIDDIE HOLE OF DOOM #
+
+![The_hole_of_doom](/images/honeypot_desk.jpg)
 On the otherhand, this honeypot started as a funny thing to do and see how many people attacked our network.  This honeypot can not be as advanced as the ones linked above, since it is being run on a microcontroller.  This is why it emulates Telnet.  Telnet is a simple protocol that is easy to emulate on microcontroller, due to their being no encryption to worry about.
 
 ## The hardware and software ##
