@@ -10,4 +10,4 @@ def sendStatus():
     # converts to string format
     ip = raw_ip.text
     # if dweet is used, then change the thing name to something unique, do not keep this one
-    send_status = urequests.get('https://dweet.io/dweet/for/telnetespserver?status=%s' % ip, final_value)
+    send_status = urequests.get('https://dweet.io/dweet/for/telnetespserver?status=%s' % ip)
