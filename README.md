@@ -17,11 +17,12 @@ A honeypot is a device designed to lure/attract hackers into exploring your devi
 
 # The SCRIPT KIDDIE HOLE OF DOOM #
 
+The ESP8266 in all of its glory: :ok_hand:
 ![The_hole_of_doom](/images/honeypot_desk.jpg)
 On the otherhand, this honeypot started as a funny thing to do and see how many people attacked our network.  This honeypot can not be as advanced as the ones linked above, since it is being run on a microcontroller.  This is why it emulates Telnet.  Telnet is a simple protocol that is easy to emulate on microcontroller, due to their being no encryption to worry about.
 
 ## The hardware and software ##
-   - An ESP8266 microcontroller :iphone:
+   - An ESP8266 microcontroller ([Adafruit Feather](https://www.adafruit.com/product/2821) version pictured above)
    - A Windows, Linux, or MacOS computer :computer:
    - If you have the bare ESP8266 module, you will also need a USB to Serial converter board, and the additional drivers to go with it
    - If you have a board with the USB to Serial chip already on it, you still need the appropriate drivers and a micro USB cable :electric_plug:
@@ -34,6 +35,8 @@ On the otherhand, this honeypot started as a funny thing to do and see how many 
    - **Fake** FDIC "get of my lawn" warnings :thumbsup:
 
 ## The attack sequence and mentality of the script kiddie ##
+
+![script_kiddie](/images/script_kiddies.jpg)
 
  1.  Your ESP8266 honeypot found either with Shodan, Google Dorks, on accident, etc.
  2.  The hacker scans your router, and finds port 23 open.  An experienced hacker will know it is a              honeypot (routers do not just have port 23 open randomly!!)
@@ -51,6 +54,7 @@ On the otherhand, this honeypot started as a funny thing to do and see how many 
 
 ## Monitoring (optional) ##
 
+   ![Wireshark](/images/wireshark_medium.jpg)
  - set up [Wireshark](https://www.wireshark.org/) on a free computer to run all the time and capture packets
  - set a filter for Telnet ports
  - you will be able to see the plain ASCII text, since Telnet is not encrypted!!
