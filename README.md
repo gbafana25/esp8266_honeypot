@@ -32,7 +32,7 @@ On the otherhand, this honeypot started as a funny thing to do and see how many 
    - Console interface has **all-uppercase text** :thumbsup:
    - **Fake** database contents :thumbsup:
    - **Fake** system information :thumbsup:
-   - **Fake** FDIC "get of my lawn" warnings :thumbsup:
+   - **Fake** FDIC "get off my lawn" warnings :thumbsup:
 
 ## The attack sequence and mentality of the script kiddie ##
 
