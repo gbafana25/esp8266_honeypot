@@ -12,24 +12,24 @@ Original inspiration for this came from the arduino-powered honeypot, found [her
 The esp8266 handles all of the socket functions and the terminal prompt.  The access point is disabled in the custom `boot.py` file.  The `boot.py` file must have the WiFi SSID, Wifi password, static IP, subnet mask, router IP, and DNS server address changed as needed.  The ampy config file (whichever one applies to your system) must be edited to point ampy to the right port (COMx for Windows, /dev/ttyUSB* for Linux, /dev/tty.* for Mac)
 
 ## The hardware and software ##
-   - An ESP8266 microcontroller
-   - A Windows, Linux, or MacOS computer
+   - An ESP8266 microcontroller :iphone:
+   - A Windows, Linux, or MacOS computer :computer:
    - If you have the bare ESP8266 module, you will also need a USB to Serial converter board, and the additional drivers to go with it
-   - If you have a board with the USB to Serial chip already on it, you still need the appropriate drivers and a micro USB cable
+   - If you have a board with the USB to Serial chip already on it, you still need the appropriate drivers and a micro USB cable :electric plug:
 
 ## :ok_hand: Features :ok_hand: ##
 
-   - Console interface has **all-uppercase text**
-   - **Fake** database contents
-   - **Fake** system information
-   - **Fake** FDIC "get of my lawn" warnings
+   - Console interface has **all-uppercase text** :thumbsup:
+   - **Fake** database contents :thumbsup:
+   - **Fake** system information :thumbsup:
+   - **Fake** FDIC "get of my lawn" warnings :thumbsup:
 
 ### The attack sequence and mentality of the script kiddie ###
 
- 1.  Your ESP8266 honeypot found either with Shodan, Google Dorks, etc.
+ 1.  Your ESP8266 honeypot found either with Shodan, Google Dorks, on accident, etc.
  2.  The hacker scans your router, and finds port 23 open.  An experienced hacker will know it is a              honeypot (routers do not just have port 23 open randomly!!)
- 3.  The script kiddie will keep trying to guess the password for the router, until they decide to try          the telnet port, and they get excited that no password is required to login to the server
- 4.  They start entering commands, but after awhile, something doesn't seem right.... **UNTIL THEY TRY          TO EXIT AND REALIZE THAT THEY WERE BEING WATCHED THE WHOLE TIME!!! MWHAHAHAHA** :smiling_imp: :smiling_imp: (not really, their IP wasn't logged, the message is just to scare them)
+ 3.  The script kiddie will keep trying to guess the password for the router :confused:, until they decide to try the telnet port, and they get excited that no password is required to login to the server!! :grinning:
+ 4.  They start entering commands, but after awhile, something doesn't seem right.... **UNTIL THEY TRY          TO EXIT AND REALIZE THAT THEY WERE BEING WATCHED THE WHOLE TIME!!! MWHAHAHAHA** :smiling_imp: :smiling_imp: :astonished: (not really, their IP wasn't logged, the message is just to scare them)
 
 Deploying the script:
  1. Create file `main.py` in the project directory
