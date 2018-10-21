@@ -11,11 +11,18 @@ Original inspiration for this came from the arduino-powered honeypot, found [her
 
 The esp8266 handles all of the socket functions and the terminal prompt.  The access point is disabled in the custom `boot.py` file.  The `boot.py` file must have the WiFi SSID, Wifi password, static IP, subnet mask, router IP, and DNS server address changed as needed.  The ampy config file (whichever one applies to your system) must be edited to point ampy to the right port (COMx for Windows, /dev/ttyUSB* for Linux, /dev/tty.* for Mac)
 
+# What is a honeypot #
+
+A honeypot is a device designed to lure/attract hackers into exploring your device as if it was a legitamte piece of infrastructure or private property that is unprotected.  Many open source honeypots, such as the ones found [here](https://github.com/paralax/awesome-honeypots) are designed to report attacks and gather information about hackers' activity on your network
+
+# The SCRIPT KIDDIE HOLE OF DOOM #
+On the otherhand, this honeypot started as a funny thing to do and see how many people attacked our network.  This honeypot can not be as advanced as the ones linked above, since it is being run on a microcontroller.  This is why it emulates Telnet.  Telnet is a simple protocol that is easy to emulate on microcontroller, due to their being no encryption to worry about.
+
 ## The hardware and software ##
    - An ESP8266 microcontroller :iphone:
    - A Windows, Linux, or MacOS computer :computer:
    - If you have the bare ESP8266 module, you will also need a USB to Serial converter board, and the additional drivers to go with it
-   - If you have a board with the USB to Serial chip already on it, you still need the appropriate drivers and a micro USB cable :electric plug:
+   - If you have a board with the USB to Serial chip already on it, you still need the appropriate drivers and a micro USB cable :electric_plug:
 
 ## :ok_hand: Features :ok_hand: ##
 
@@ -24,7 +31,7 @@ The esp8266 handles all of the socket functions and the terminal prompt.  The ac
    - **Fake** system information :thumbsup:
    - **Fake** FDIC "get of my lawn" warnings :thumbsup:
 
-### The attack sequence and mentality of the script kiddie ###
+## The attack sequence and mentality of the script kiddie ##
 
  1.  Your ESP8266 honeypot found either with Shodan, Google Dorks, on accident, etc.
  2.  The hacker scans your router, and finds port 23 open.  An experienced hacker will know it is a              honeypot (routers do not just have port 23 open randomly!!)
@@ -33,10 +40,12 @@ The esp8266 handles all of the socket functions and the terminal prompt.  The ac
 
 Deploying the script:
  1. Create file `main.py` in the project directory
- 2. Copy and paste the contents of `esp_8266_honeypot.py` into `main.py`
+ 2. Copy and paste the contents of `esp8266_honeypot.py` into `main.py` with `cp esp8266_honeypot.py /path/to/main.py`
  3. Run the `ampy_config.bat` or `ampy_config.sh` (depending on your operating system)
- 4. Run `ampy put main.py`
- 5. Reset your board for the program to run 
+ 4. Run `ampy put sys_messages.py` and `ampy put status_update.py`
+ 5. Run `ampy put main.py`
+ 6. Reset your board for the program to run 
+ 7. Wait for those l33t h4x0rs!! :ok_hand:
 
 Coming soon:
 
