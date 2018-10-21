@@ -51,7 +51,7 @@ while True:
         elif data == sys_messages.commands[4]:
             time.sleep(1)
             conn.sendall(sys_messages.nas_status)
-        elif data == sys_messages.commands[6]:
+        elif data == sys_messages.commands[5]:
             conn.sendall(b'\r\nCLOSING CONNECTION...   AND LOGGING YOUR IP')
             time.sleep(1)
             conn.close()
