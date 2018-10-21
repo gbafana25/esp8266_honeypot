@@ -27,12 +27,12 @@ On the otherhand, this honeypot started as a funny thing to do and see how many 
    - If you have the bare ESP8266 module, you will also need a USB to Serial converter board, and the additional drivers to go with it
    - If you have a board with the USB to Serial chip already on it, you still need the appropriate drivers and a micro USB cable :electric_plug:
 
-## :ok_hand: Features :ok_hand: ##
+## Features :ok_hand: ##
 
-   - Console interface has **all-uppercase text** :thumbsup:
-   - **Fake** database contents :thumbsup:
-   - **Fake** system information :thumbsup:
-   - **Fake** FDIC "get off my lawn" warnings :thumbsup:
+   - Console interface has **all-uppercase text**
+   - **Fake** database contents
+   - **Fake** system information
+   - **Fake** FDIC "get off my lawn" warnings
 
 ## The attack sequence and mentality of the script kiddie ##
 

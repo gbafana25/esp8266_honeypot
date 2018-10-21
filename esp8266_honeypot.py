@@ -19,6 +19,9 @@ import machine
 import time
 import urequests
 import sys_messages
+import status_update
+
+
 # shows terminal prompt
 def showPrompt():
     for i in range(1):
@@ -31,6 +34,7 @@ sk.bind(('192.168.0.200', 23))
 sk.listen(5)
 conn,addr = sk.accept()
 conn.sendall(sys_messages.welcome)
+status_update.sendStatus()
 
 # loops forever while client is connected, checks input with commands list
 while True:
