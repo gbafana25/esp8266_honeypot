@@ -26,6 +26,7 @@ def showPrompt():
 
 sk = socket(AF_INET, SOCK_STREAM)
 sk.setsockopt(SOL_SOCKET, SO_REUSEADDR, 1)
+sk.settimeout(None)
 sk.bind(('192.168.0.200', 23))
 sk.listen(5)
 conn,addr = sk.accept()
@@ -34,34 +35,38 @@ conn.sendall(sys_messages.welcome)
 # loops forever while client is connected, checks input with commands list
 while True:
     data = conn.recv(1024)
-    # displays fake system information
-    if data == sys_messages.commands[0]:
-        time.sleep(1)
-        conn.sendall(sys_messages.sys_info)
-    # shows fake database
-    elif data == sys_messages.commands[1]:
-        time.sleep(1)
-        conn.sendall(sys_messages.database)
-    # attempts to open fake account management application
-    elif data == sys_messages.commands[2]:
-        time.sleep(1)
-        conn.sendall(b'\r\nERROR: PROCESS IN USE\r\n\n')
-    elif data == sys_messages.commands[3]:
-        time.sleep(1)
-        conn.sendall(sys_messages.attached_devices)
-    # closes connection
-    elif data == sys_messages.commands[4]:
-        conn.sendall(b'\r\nCLOSING CONNECTION...   AND LOGGING YOUR IP')
-        time.sleep(1)
+    try:
+        if data == sys_messages.commands[0]:
+            time.sleep(1)
+            conn.sendall(sys_messages.sys_info)   
+        elif data == sys_messages.commands[1]:
+            time.sleep(1)
+            conn.sendall(sys_messages.database)
+        elif data == sys_messages.commands[2]:
+            time.sleep(1)
+            conn.sendall(b'\r\nERROR: PROCESS IN USE\r\n\n')
+        elif data == sys_messages.commands[3]:
+            time.sleep(1)
+            conn.sendall(sys_messages.attached_devices)
+        elif data == sys_messages.commands[4]:
+            time.sleep(1)
+            conn.sendall(sys_messages.nas_status)
+        elif data == sys_messages.commands[6]:
+            conn.sendall(b'\r\nCLOSING CONNECTION...   AND LOGGING YOUR IP')
+            time.sleep(1)
+            conn.close()
+            sk.close()
+            del sk
+            machine.reset()
+        elif data != sys_messages.commands and data == b'\r\n' and data != b'':
+            showPrompt()
+        elif data not in sys_messages.commands:
+            conn.sendall(b'\r\n\nVALID COMMANDS\r\n\n')
+            conn.sendall(sys_messages.valid_commands)
+        if not data:
+            conn.sendall(data)
+    except OSError:
         conn.close()
         sk.close()
         del sk
-        break
         machine.reset()
-    elif data != sys_messages.commands and data == b'\r\n' and data != b'':
-        showPrompt()
-    elif data not in sys_messages.commands:
-        conn.sendall(b'\r\n\nVALID COMMANDS\r\n\n')
-        conn.sendall(sys_messages.valid_commands)
-    if not data:
-        conn.sendall(data)
