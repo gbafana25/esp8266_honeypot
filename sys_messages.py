@@ -3,7 +3,7 @@
 # If you have any other messages to add, put them here, and then implement them in esp8266_honeypot.py
 
 welcome = b'\r\n\nFDIC  FRONTIER SAVINGS BANK\r\nWARNING: UNAUTHORIZED USE IS PROHIBITED BY LAW\r\n'
-# array_num       0            1               2                   3                4              5           6
+# array_number     0            1              2                   3                4              5           6
 commands = [b'SYS_STATUS', b'DB_LIST', b'ACCOUNT_MANAGER', b'DEVICE_MANAGER', b'NAS_STATUS', b'AUDIT_LOG', b'EXIT']
 valid_commands = b'\r\n\nSYS_STATUS - DISPLAY SYSTEM INFO\r\nDB_LIST - SHOW CURRENT DATABASE LISTING\r\nACCOUNT_MANAGER - OPENS ACCOUNT MANAGER\r\nDEVICE_MANAGER - SHOW CURRENTLY ATTACHED DEVICES\r\nNAS_STATUS - SHOWS STATUS OF NETWORK DRIVES\r\nEXIT - CLOSE CONNECTION\r\n\n'
 prompt = 'FSB_MNGR:---> '
