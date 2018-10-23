@@ -45,9 +45,9 @@ On the otherhand, this honeypot started as a funny thing to do and see how many 
 
 ## Deploying the script: ##
  1. Create file `main.py` in the project directory
- 2. Copy and paste the contents of `esp8266_honeypot.py` into `main.py` with `cp esp8266_honeypot.py /path/to/main.py`
+ 2. Copy and paste the contents of `esp8266_honeypot.py` into `main.py` with `cp esp8266_honeypot.py main.py`
  3. Run the `ampy_config.bat` or `ampy_config.sh` (depending on your operating system)
- 4. Run `ampy put sys_messages.py` and `ampy put status_update.py`
+ 4. Run `ampy put sys_messages.py` and `ampy put status_update.py` to copy the modules to the board
  5. Run `ampy put main.py`
  6. Reset your board for the program to run 
  7. Wait for those l33t h4x0rs!! :ok_hand:
