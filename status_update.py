@@ -11,4 +11,4 @@ def sendStatus():
     ip = raw_ip.text
     fake_ip = "1.2.3.4"
     # if dweet is used, then change the thing name to something unique, do not keep this one
-    send_status = urequests.get('https://dweet.io/dweet/for/telnetespserver?status=%s' % fake_ip) # put fake our real ip variable in here
+    send_status = urequests.get('https://dweet.io/dweet/for/telnetespserverunique_id_here?status=%s' % fake_ip) # put fake our real ip variable in here
