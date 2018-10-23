@@ -69,5 +69,3 @@ On the otherhand, this honeypot started as a funny thing to do and see how many 
  - better readme (screenshots, and memes possibly)
 
 *please star this repo if you found it useful*
-
-DM @frogthemonkey25#6628 on Discord if you have any questions or found a typo
