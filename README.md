@@ -69,4 +69,4 @@ On the otherhand, this honeypot started as a funny thing to do and see how many 
  - implement try/except statement in the main code to avoid connection timeout (probably by resetting the     socket or rebooting the MCU)
  - better readme (screenshots, and memes possibly)
 
-*please star this repo if you found it useful*
+*please star this repo if you found it useful and/or interesting*
