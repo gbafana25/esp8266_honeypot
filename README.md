@@ -45,7 +45,7 @@ On the otherhand, this honeypot started as a funny thing to do and see how many 
 
 ## Deploying the script: ##
  1. Create file `main.py` in the project directory
- 2. Copy and paste the contents of `esp8266_honeypot.py` into `main.py` with `cp esp8266_honeypot.py main.py`
+ 2. Copy and paste the contents of `esp8266_honeypot.py` into `main.py`
  3. Open `status_update.py` and modify the URL in line 14 where it says unique_id_here.  This will prevent anyone elses server from posting to the same dweet URL.
  4. Run the `ampy_config.bat` or `ampy_config.sh` (depending on your operating system)
  5. Run `ampy put sys_messages.py` and `ampy put status_update.py` to copy the modules to the board

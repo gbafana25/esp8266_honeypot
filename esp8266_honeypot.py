@@ -1,5 +1,5 @@
- # ESP8266 FAKE HONEYPOT
- # DESIGNED TO ACT AS A TELNET SERVER
+# ESP8266 FAKE HONEYPOT
+# DESIGNED TO ACT AS A TELNET SERVER
 # Features:
 #   all uppercase text in the interface
 #   fake system details
@@ -9,23 +9,18 @@
 # 
 #   made by the one and only Kramer Management Systems!! (not a real thing)
 #   
-#   Todo:
-#   log how many times it has been accessed (probably logging it to a file on the board's internal filesystem)
-#   send status updates through dweet.io
-#   
 
 from socket import socket, AF_INET, SOCK_STREAM, SOL_SOCKET, SO_REUSEADDR
 import machine
 import time
 import urequests
 import sys_messages
-import status_update
-
 
 # shows terminal prompt
 def showPrompt():
     for i in range(1):
         conn.sendall(sys_messages.prompt)
+    
 
 sk = socket(AF_INET, SOCK_STREAM)
 sk.setsockopt(SOL_SOCKET, SO_REUSEADDR, 1)
@@ -34,7 +29,10 @@ sk.bind(('192.168.0.200', 23))
 sk.listen(5)
 conn,addr = sk.accept()
 conn.sendall(sys_messages.welcome)
-status_update.sendStatus()
+
+# if dweet is used, then change the thing name to something unique, do not keep this one
+send_status = urequests.get('https://dweet.io/dweet/for/telnetespserverunique_id_here?logged_in_by=%s' % addr[0]) # put fake our real ip variable in here
+
 
 # loops forever while client is connected, checks input with commands list
 while True:
