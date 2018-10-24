@@ -64,8 +64,8 @@ On the otherhand, this honeypot started as a funny thing to do and see how many 
 
 ## Coming soon: ##
 
- - more comments on code
- - more commands available to hackers
- - better readme (screenshots, and memes possibly)
+ - more comments on code (probably will always be here)
+ - more commands available to hackers (suggestions welcome on ycombinator and reddit)
+ - better readme (screenshots of nmap, dweet messages, etc., and memes possibly)
 
 *please star this repo if you found it useful and/or interesting*

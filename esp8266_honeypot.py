@@ -10,17 +10,26 @@
 #   made by the one and only Kramer Management Systems!! (not a real thing)
 # 
 
+
+# import statements
+# -----------------------------------------------------------------------
+
 from socket import socket, AF_INET, SOCK_STREAM, SOL_SOCKET, SO_REUSEADDR
 import machine
 import time
 import urequests
 import sys_messages
 
+# ----------------------------------------------------------------------------
+
 # shows terminal prompt
 def showPrompt():
     for i in range(1):
         conn.sendall(sys_messages.prompt)
     
+
+# Creates and listens for a client
+# -----------------------------------------------
 
 sk = socket(AF_INET, SOCK_STREAM)
 sk.setsockopt(SOL_SOCKET, SO_REUSEADDR, 1)
@@ -30,11 +39,17 @@ sk.listen(5)
 conn,addr = sk.accept()
 conn.sendall(sys_messages.welcome)
 
-# if dweet is used, then change the thing name to something unique, do not keep this one
-send_status = urequests.get('https://dweet.io/dweet/for/telnetespserverunique_id_here?logged_in_by=%s' % addr[0]) # put fake our real ip variable in here
 
+# -------------------------------------------------
+
+
+# if dweet is used, then change the thing name to something unique, do not keep this one
+send_status = urequests.get('https://dweet.io/dweet/for/telnetespserverunique_id_here?logged_in_by=%s' % addr[0]) # displays IP address logged in from, accept() function returns a tuple
+
+# ------------------------------------------------------------------------------------
 
 # loops forever while client is connected, checks input with commands list
+# The except part will reboot the ESP8266 if the client closes the window
 while True:
     data = conn.recv(1024)
     try:
@@ -72,3 +87,5 @@ while True:
         sk.close()
         del sk
         machine.reset()
+
+# -----------------------------------------------------------------------------------------
