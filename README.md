@@ -2,6 +2,8 @@
 
 :stuck_out_tongue_winking_eye: :stuck_out_tongue_winking_eye: :stuck_out_tongue_winking_eye:
 
+**Update 10-23-18: IP address logging is now enabled :smiley:, I will be providing screenshots soon to show when the server was accessed.  IP addresses are not stored on the board, but I plan to make a program to pull down the dweets and log them to your local machine.  Once I cover most of the goals I set at the bottom of the README, I will make either a beta or official first release, but features will still be added.**
+
 This is a honeypot programmed in Micropython for the ESP8266
 
 The honeypot is set up to act as a telnet server owned by a fake bank.
@@ -64,9 +66,6 @@ On the otherhand, this honeypot started as a funny thing to do and see how many 
 
  - more comments on code
  - more commands available to hackers
- - logging of how many times accessed
- - sending of [dweets](http://dweet.io/) to send status updates (Every time the MCU boots up)
- - implement try/except statement in the main code to avoid connection timeout (probably by resetting the     socket or rebooting the MCU)
  - better readme (screenshots, and memes possibly)
 
 *please star this repo if you found it useful and/or interesting*

@@ -8,7 +8,7 @@
 #  ------------------------------------------------------------------------------------    
 # 
 #   made by the one and only Kramer Management Systems!! (not a real thing)
-#   
+# 
 
 from socket import socket, AF_INET, SOCK_STREAM, SOL_SOCKET, SO_REUSEADDR
 import machine
