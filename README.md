@@ -2,7 +2,7 @@
 
 :stuck_out_tongue_winking_eye: :stuck_out_tongue_winking_eye: :stuck_out_tongue_winking_eye:
 
-**Update 10-23-18: IP address logging is now enabled :smiley:, I will be providing screenshots soon to show when the server was accessed.  IP addresses are not stored on the board, but I plan to make a program to pull down the dweets and log them to your local machine.  Once I cover most of the goals I set at the bottom of the README, I will make either a beta or official first release, but features will still be added.**
+**Update 10-23-18: IP address logging is now enabled :smiley:, I will be providing screenshots soon to show when the server was accessed.  IP addresses are not stored on the board, but I plan to make a program to pull down the dweets and log them to your local machine.  Once I cover most of the goals I set at the bottom of the README, I will make either a beta or official first release, but features will still be added.  Please stay tuned for more updates on weekends, since I can do a lot more work then.  Big thank you to anyone who has shared this with their friends or on social media!**
 
 This is a honeypot programmed in Micropython for the ESP8266
 
