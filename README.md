@@ -65,7 +65,7 @@ On the otherhand, this honeypot started as a funny thing to do and see how many 
 ## Coming soon: ##
 
  - more comments on code (probably will always be here)
- - more commands available to hackers (suggestions welcome on ycombinator and reddit)
+ - more commands available to hackers (suggestions welcome on ycombinator and [reddit](https://www.reddit.com/r/esp8266/comments/9qkdeb/the_script_kiddie_hole_of_doom_not_in_caps_lock/))
  - better readme (screenshots of nmap, dweet messages, etc., and memes possibly)
 
 *please star this repo if you found it useful and/or interesting*
