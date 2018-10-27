@@ -3,6 +3,7 @@
 :stuck_out_tongue_winking_eye: :stuck_out_tongue_winking_eye: :stuck_out_tongue_winking_eye:
 
 **Update 10-26-18:  I've been logging some IP addresses lately, bu this is the first time I've taken a screenshot of them.  I didn't want to get in trouble, so I blurred out the addresses, but hopefully that proves that this gets logged into quite a bit.  If you doubt the validity of the picture, then try this script on your ESP8266!! (just don't sit and watch it all day, that would be boring. :stuck_out_tongue_winking_eye:).  If you scan or try to find the location of the IP addresses logged, I am not responsible if you get caught, since port scanning and vulnerability scanning WITHOUT PERMISSION is illegal.  I plan to release the "beta" release this weekend.  Once again, thank you for all your suggestions, edits, and support on social media!! :grinning:** 
+
 ![logging_sample](/images/h4x0r_IPs.png)
 
 This is a honeypot programmed in Micropython for the ESP8266
