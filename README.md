@@ -7,6 +7,9 @@
 
 ![hacker_ips](/images/h4x0r_IPs.png)
 
+
+# About this project #
+
 This is a honeypot programmed in Micropython for the ESP8266
 
 The honeypot is set up to act as a telnet server owned by a fake bank.
