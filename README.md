@@ -51,15 +51,15 @@ On the otherhand, this honeypot started as a funny thing to do and see how many 
  3.  The script kiddie will keep trying to guess the password for the router :confused:, until they decide to try the telnet port, and they get excited that no password is required to login to the server!! :grinning:
  4.  They start entering commands, but after awhile, something doesn't seem right.... **UNTIL THEY TRY          TO EXIT AND REALIZE THAT THEY WERE BEING WATCHED THE WHOLE TIME!!! MWHAHAHAHA** :smiling_imp: :smiling_imp: :astonished: (not really, their IP wasn't logged, the message is just to scare them)
 
-## Deploying the script: ##
- 1. Create file `main.py` in the project directory
- 2. Copy and paste the contents of `esp8266_honeypot.py` into `main.py`
- 3. Open `status_update.py` and modify the URL in line 14 where it says unique_id_here.  This will prevent anyone elses server from posting to the same dweet URL.
- 4. Run the `ampy_config.bat` or `ampy_config.sh` (depending on your operating system)
- 5. Run `ampy put sys_messages.py` and `ampy put status_update.py` to copy the modules to the board
- 6. Run `ampy put main.py`
- 7. Reset your board for the program to run 
- 8. Wait for those l33t h4x0rs!! :ok_hand:
+## Deploying the script ##
+**New!! installer scripts automate copying of files**
+ - clone this repository with `git clone https://github.com/gbafana25/esp8266_honeypot`
+ - switch to the project directory with `cd esp8266_honeypot/`
+ - Run `install.bat` if you are on Windows or `install.sh` if you are on a Unix system
+ - Reset the microcontroller
+ - Wait for those l33t h4x0rs :ok_hand:
+
+ You can verify that the ESP8266 is working by finding it on your network, log into it over telnet, and go to your unique link to see if it logged your IP
 
 ## Monitoring (optional) ##
 
