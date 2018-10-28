@@ -25,7 +25,7 @@ A honeypot is a device designed to lure/attract hackers into exploring your devi
 
 The ESP8266 in all of its glory: :ok_hand:
 ![The_hole_of_doom](/images/honeypot_desk.jpg)
-On the otherhand, this honeypot started as a funny thing to do and see how many people attacked our network.  This honeypot can not be as advanced as the ones linked above, since it is being run on a microcontroller.  This is why it emulates Telnet.  Telnet is a simple protocol that is easy to emulate on microcontroller, due to their being no encryption to worry about.
+This honeypot started as a funny thing to do and see how many people still attack Telnet devices.  This honeypot can not be as advanced as the ones linked above, since it is being run on a microcontroller.  This is why it emulates Telnet.  Telnet is a simple protocol that is easy to emulate on microcontroller, due to their being no encryption to worry about.
 
 ## The hardware and software ##
    - An ESP8266 microcontroller ([Adafruit Feather](https://www.adafruit.com/product/2821) version pictured above)
