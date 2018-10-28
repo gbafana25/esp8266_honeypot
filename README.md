@@ -2,11 +2,9 @@
 
 :stuck_out_tongue_winking_eye: :stuck_out_tongue_winking_eye: :stuck_out_tongue_winking_eye:
 
-**Update 10-27-18:  I've been logging some IP addresses lately, bu this is the first time I've taken a screenshot of them.  I didn't want to get in trouble, so I blurred out the addresses, but hopefully that proves that this gets logged into quite a bit by looking at the dweet creation date.  If you doubt the validity of the picture, then try this script on your ESP8266!! (just don't sit and watch it all day, that would be boring. :stuck_out_tongue_winking_eye:).  If you scan or try to find the location of the IP addresses logged, I am not responsible if you get caught, since port scanning and vulnerability scanning WITHOUT PERMISSION is illegal.  I plan to release the "beta" release this weekend.  Once again, thank you for all your suggestions, edits, and support on social media!! :grinning:** 
+**Beta out now!!** 
 
-
-![hacker_ips](/images/h4x0r_IPs.png)
-
+**If you scan or try to find the location of the IP addresses logged, I am not responsible if you get caught, since port scanning and vulnerability scanning WITHOUT PERMISSION is illegal.  Once again, thank you for all your suggestions, edits, and support on social media!! :grinning:** 
 
 # About this project #
 
@@ -49,7 +47,7 @@ On the otherhand, this honeypot started as a funny thing to do and see how many 
  1.  Your ESP8266 honeypot found either with Shodan, Google Dorks, on accident, etc.
  2.  The hacker scans your router, and finds port 23 open.  An experienced hacker will know it is a              honeypot (routers do not just have port 23 open randomly!!)
  3.  The script kiddie will keep trying to guess the password for the router :confused:, until they decide to try the telnet port, and they get excited that no password is required to login to the server!! :grinning:
- 4.  They start entering commands, but after awhile, something doesn't seem right.... **UNTIL THEY TRY          TO EXIT AND REALIZE THAT THEY WERE BEING WATCHED THE WHOLE TIME!!! MWHAHAHAHA** :smiling_imp: :smiling_imp: :astonished: (not really, their IP wasn't logged, the message is just to scare them)
+ 4.  They start entering commands, but after awhile, something doesn't seem right.... **UNTIL THEY TRY          TO EXIT AND REALIZE THAT THEY WERE BEING WATCHED THE WHOLE TIME!!! MWHAHAHAHA** :smiling_imp: :smiling_imp: :astonished: (not really, but their IP was logged)
 
 ## Deploying the script ##
 **New!! installer scripts automate copying of files**
@@ -59,7 +57,7 @@ On the otherhand, this honeypot started as a funny thing to do and see how many 
  - Reset the microcontroller
  - Wait for those l33t h4x0rs :ok_hand:
 
- You can verify that the ESP8266 is working by finding it on your network, log into it over telnet, and go to your unique link to see if it logged your IP
+ You can verify that the ESP8266 is working by finding it on your network, log into it over telnet, and go to your unique link to see if it logged your IP.
 
 ## Monitoring (optional) ##
 
