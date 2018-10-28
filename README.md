@@ -2,7 +2,7 @@
 
 :stuck_out_tongue_winking_eye: :stuck_out_tongue_winking_eye: :stuck_out_tongue_winking_eye:
 
-**Beta out now!!** 
+**Version 1.0 out now!!** 
 
 **If you scan or try to find the location of the IP addresses logged, I am not responsible if you get caught, since port scanning and vulnerability scanning WITHOUT PERMISSION is illegal.  Once again, thank you for all your suggestions, edits, and support on social media!! :grinning:** 
 
