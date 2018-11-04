@@ -33,12 +33,12 @@ def showPrompt():
 
 sk = socket(AF_INET, SOCK_STREAM)
 sk.setsockopt(SOL_SOCKET, SO_REUSEADDR, 1)
-sk.settimeout(None)
+sk.settimeout(60)
 sk.bind(('192.168.0.200', 23))
 sk.listen(5)
 conn,addr = sk.accept()
 conn.sendall(sys_messages.welcome)
-
+conn.sendall(sys_messages.sys_info_shortened)
 
 # -------------------------------------------------
 
